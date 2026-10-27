@@ -1,0 +1,9 @@
+# Credentials and runtime state
+config.json
+onboarding-state.json
+
+# Stale test artifacts
+config-test-blank.json
+
+# Generated docs
+*.pdf

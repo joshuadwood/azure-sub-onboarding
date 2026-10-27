@@ -1,0 +1,45 @@
+{
+  "_comment": "Common fields (required for both modes)",
+  "dynatrace_subscription_id":     "<source-monitor-subscription-id>",
+  "dynatrace_resource_group_name": "<source-monitor-resource-group>",
+  "dynatrace_monitor_name":        "<source-monitor-name>",
+  "dynatrace_region":              "eastus",
+
+  "_comment_distributed": "Additional fields required for -Mode Distributed and HybridCentralized",
+  "dynatrace_environment_id":              "<your-dynatrace-env-id>",
+  "dynatrace_environment_ingestion_key":   "<dt0c01.XXXXXX.XXXXXX>",
+  "dynatrace_landing_url":                 "https://<env-id>.apps.dynatrace.com",
+
+  "_comment_distributed_resources": "Controls for distributed mode resource creation",
+  "resource_name_prefix":           "dt-monitor",
+  "target_resource_group_name":     "rg-dynatrace",
+  "create_resource_group":          true,
+
+  "_comment_plan": "Marketplace plan data (optional override — auto-detected from source monitor if omitted)",
+  "plan": {
+    "name": "azportalintegration_dynatrace_payg",
+    "publisher": "dynatrace",
+    "product": "dynatrace_portal_integration",
+    "promotionCode": ""
+  },
+  "plan_data": {
+    "usageType": "Committed",
+    "billingCycle": "Monthly",
+    "planDetails": "azportalintegration_dynatrace_payg",
+    "effectiveDate": "2024-10-01T00:00:00Z"
+  },
+
+  "_comment_filters": "Subscription discovery filters (optional)",
+  "subscription_filter": "",
+  "subscription_exclude_pattern": "",
+
+  "defaults": {
+    "send_activity_logs":        true,
+    "send_subscription_logs":    true,
+    "send_metrics":              true,
+    "auto_muting":               true,
+    "create_diagnostic_setting": true
+  },
+
+  "subscription_overrides": {}
+}
