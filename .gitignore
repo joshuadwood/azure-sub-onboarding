@@ -7,3 +7,6 @@ config-test-blank.json
 
 # Generated docs
 *.pdf
+AGENT-MEMORY.md
+image.png
+image-1.png
